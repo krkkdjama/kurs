@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Chess</title>
+	<style>
+	.light-cell {
+width: 10vmin; height: 10vmin;
+background: yellow;
+border: 1px solid black;
+	}
+	.dark-cell {
+width: 10vmin; height: 10vmin;
+background: brown;
+border: 1px solid black;
+	}
+	.row-even {
+float: left;
+	}
+	.row-odd {
+float: left;
+	}
+	.dark-korol {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: 1vmin 0;
+background-size: 60vmin;		
+	}
+	.light-korol {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: 1vmin -10vmin;
+background-size: 60vmin;		
+	}
+	.dark-ferz {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -9vmin 0;
+background-size: 60vmin;		
+	}
+	.light-ferz {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -9vmin -10vmin;
+background-size: 60vmin;		
+	}	
+	.dark-kon {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -42vmin 0;
+background-size: 60vmin;		
+	}
+	.light-kon {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -42vmin -10vmin;
+background-size: 60vmin;		
+	}
+	.dark-ladya {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -20vmin 0;
+background-size: 60vmin;		
+	}
+	.light-ladya {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -20vmin -10vmin;
+background-size: 60vmin;		
+	}
+	.dark-peshka {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -52vmin 0;
+background-size: 60vmin;
+	}
+	.light-peshka {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -52vmin -10vmin;
+background-size: 60vmin;
+	}
+	.dark-slon {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -31vmin 0;
+background-size: 60vmin;
+	}
+	.light-slon {
+background-image: url("image.png");
+background-repeat: no-repeat;
+background-position: -31vmin -10vmin;
+background-size: 60vmin;
+	}				
+</style>
+</head>
+<body style="margin: 0; padding: 0;">
+	<div>
+
+		<div class="row-odd">
+			<div class="light-cell dark-ladya"></div><div class="dark-cell dark-peshka"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell light-peshka"></div><div class="dark-cell light-ladya"></div>
+		</div>
+
+		<div class="row-even">
+			<div class="dark-cell dark-kon"></div><div class="light-cell dark-peshka"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell light-peshka"></div><div class="light-cell light-kon"></div>
+		</div>
+
+		<div class="row-odd">
+			<div class="light-cell dark-slon"></div><div class="dark-cell dark-peshka"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell light-peshka"></div><div class="dark-cell light-slon"></div>
+		</div>
+
+		<div class="row-even">
+			<div class="dark-cell dark-ferz"></div><div class="light-cell dark-peshka"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell light-peshka"></div><div class="light-cell light-ferz"></div>
+		</div>
+
+		<div class="row-odd">
+			<div class="light-cell dark-korol"></div><div class="dark-cell dark-peshka"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell light-peshka"></div><div class="dark-cell light-korol"></div>
+		</div>
+
+		<div class="row-even">
+			<div class="dark-cell dark-slon"></div><div class="light-cell dark-peshka"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell light-peshka"></div><div class="light-cell light-slon"></div>
+		</div>
+
+		<div class="row-odd">
+			<div class="light-cell dark-kon"></div><div class="dark-cell dark-peshka"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell light-peshka"></div><div class="dark-cell light-kon"></div>
+		</div>
+
+		<div class="row-even">
+			<div class="dark-cell dark-ladya"></div><div class="light-cell dark-peshka"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell"></div><div class="light-cell"></div><div class="dark-cell light-peshka"></div><div class="light-cell light-ladya"></div>
+		</div>
+	</div>
+</body>
+</html>
