@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>chess gradient</title>
+  <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+  <style>
+  .line {
+    width: 80vmin;
+    height: 10vmin;
+    border: 1px solid black;
+    float: left;
+    clear: both;
+  }
+  .line_odd {
+    background-image: linear-gradient(to right, yellow 10vmin, brown 10vmin);
+    background-size: 25% 25%;
+  }
+  .line_even {
+    background-image: linear-gradient(to right, brown 10vmin, yellow 10vmin);
+    background-size: 25% 25%;
+  }
+  .fas {
+    font-size: 7.8vmin;
+    text-align: right;   
+  }
+  .align_a {
+    
+    letter-spacing: 0.22em;
+  }
+  .align_b {
+    letter-spacing: 0.15em;
+  }
+</style>
+</head>
+<body style="margin: 0; padding: 0;">
+  <div class="line line_odd fas align_b">&#xf447 &#xf441 &#xf43a &#xf445 &#xf43f &#xf43a &#xf441 &#xf447</div>
+  <div class="line line_even fas align_a">&#xf443 &#xf443 &#xf443 &#xf443 &#xf443 &#xf443 &#xf443 &#xf443</div>
+  <div class="line line_odd"></div>
+  <div class="line line_even"></div>
+  <div class="line line_odd"></div>
+  <div class="line line_even"></div>
+  <div class="line line_odd fas align_a">&#xf443 &#xf443 &#xf443 &#xf443 &#xf443 &#xf443 &#xf443 &#xf443</div>
+  <div class="line line_even fas align_b">&#xf447 &#xf441 &#xf43a &#xf445 &#xf43f &#xf43a &#xf441 &#xf447</div>
+</body>
+</html>
