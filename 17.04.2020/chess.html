@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chess</title>
+	<style>
+	body>div{
+		outline: 1px solid red;
+		width: 100vmin;
+		height: 100vmin;
+	}
+	body>div>div {
+		width: 100vmin;
+		height: 10vmin;
+	}
+	body>div::before, body>div::after {
+		content: 'abcdefgh';
+		height: 10vmin;
+		display: block;
+		line-height: 10vmin;
+		font-size: 4vmin;
+		margin-left: 14vmin;
+		letter-spacing: 8.2vmin;
+	}
+	body>div>div>div{
+		width: 10vmin;
+		height: 10vmin;
+		display: inline-block;
+		outline: 1px solid red;
+	}
+	body>div>div{
+		font-size: 0;
+	}
+	body>div>div::before, body>div>div::after {
+		content: "";
+		width: 10vmin;
+		height: 10vmin;
+		display: inline-block;
+		font-size: 4vmin;
+		vertical-align: top;
+		line-height: 10vmin;
+		text-align: center;
+	}
+	body>div>div:nth-child(odd)>div:nth-child(odd),
+	div>div:nth-child(even)>div:nth-child(even) {
+		background-color: red;
+	}
+	body>div {
+		counter-reset: rowbefore 0 rowafter 0; 
+	}
+	body>div>div::before {
+		counter-increment: rowbefore;
+		content: counter(rowbefore);	
+	} 
+	body>div>div::after {
+		counter-increment: rowafter;
+		content: counter(rowafter);
+	}
+body>div>div:first-child>div,
+body>div>div:first-child+div>div,
+body>div>div:last-child>div,
+body>div>div:nth-last-child(2)>div {
+	background-image: url("image.png");
+	background-size: 60vmin;
+	background-repeat: no-repeat;
+}
+
+body>div>div:nth-child(7)>div {
+	background-position: -52vmin 0;
+}
+body>div>div:first-child+div>div {
+	background-position: -52vmin -10vmin;
+}
+body>div>div:first-child>div{
+	background-position-y: -10vmin; 
+}
+body>div>div:first-child>div:first-child,
+body>div>div:first-child>div:last-child,
+body>div>div:last-child>div:first-child,
+body>div>div:last-child>div:last-child {
+	background-position-x: -20vmin; 
+}
+body>div>div:first-child>div:nth-child(2),
+body>div>div:first-child>div:nth-last-child(2),
+body>div>div:last-child>div:nth-child(2),
+body>div>div:last-child>div:nth-last-child(2) {
+	background-position-x: -42vmin; 
+}
+body>div>div:first-child>div:nth-child(3),
+body>div>div:first-child>div:nth-last-child(3),
+body>div>div:last-child>div:nth-child(3),
+body>div>div:last-child>div:nth-last-child(3) {
+	background-position-x: -31vmin; 
+}
+body>div>div:first-child>div:nth-last-child(4),
+body>div>div:last-child>div:nth-last-child(4) {
+	background-position-x: -9.5vmin; 
+}
+body>div>div:first-child>div:nth-child(4),
+body>div>div:last-child>div:nth-child(4) {
+	background-position-x: 0.7vmin; 
+}
+</style>
+</head>
+<body>
+	<div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>	
+</body>
+</html>

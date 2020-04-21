@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>count</title>
+</head>
+<style>
+div>div {
+	width: 30px;
+	height: 15px;
+	display: inline-block;
+}
+body>div {
+	counter-reset: num 0 numb 1 numbb 2;
+}
+div:first-child>div::before,
+div:nth-child(5)>div:nth-child(-n+3):not(:first-child)::before,
+div:nth-child(4)>div:last-child::before,
+div:nth-child(2)>div:nth-child(odd)::before,
+div:nth-child(3)>div:nth-child(2)::before,
+div:last-child>div:last-child::before {
+	counter-increment: num;
+	content: counter(num);
+}
+div:nth-child(4)>div:nth-child(-n+3):not(:last-child)::before,
+div:nth-child(3)>div:first-child::before,
+div:last-child>div:nth-child(2)::before {
+	counter-increment: numb;
+	content: counter(numb);
+}
+div:nth-child(5)>div:first-child::before,
+div:nth-child(2)>div:nth-child(2)::before,
+div:nth-child(3)>div:last-child::before,
+div:last-child>div:first-child::before {
+	counter-increment: numbb;
+	content: counter(numbb);
+}
+</style>
+<body>
+	<div>
+		<div></div><div></div><div></div>
+	</div>
+	<div>
+		<div></div><div></div><div></div>
+	</div>
+	<div>
+		<div></div><div></div><div></div>
+	</div>
+	<div>
+		<div></div><div></div><div></div>
+	</div>
+	<div>
+		<div></div><div></div><div></div>
+	</div>
+	<div>
+		<div></div><div></div><div></div>
+	</div>
+</body>
+</html>
