@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chess dz</title>
+</head>
+<style>
+body>div {
+	width: 80vmin;
+	height: 80vmin;
+	outline: 1px solid red;
+	position: relative;
+	margin-left: 10vmin;
+}
+div>div {
+	width: 10vmin;
+	height: 10vmin;
+	position: absolute;
+	background-color: red;
+}
+div>div:nth-child(16n+2),
+div>div:nth-child(16n+4),
+div>div:nth-child(16n+6),
+div>div:nth-child(16n+8),
+div>div:nth-child(16n+9),
+div>div:nth-child(16n+11),
+div>div:nth-child(16n+13),
+div>div:nth-child(16n+15) {
+	background-color: white;
+}
+body::before, body::after {
+    content: 'abcdefgh';
+    height: 10vmin;
+    line-height: 10vmin;
+    font-size: 4vmin;
+    margin-left: 14vmin;
+    letter-spacing: 8.2vmin;
+}
+div>div:nth-of-type(8n+1)::before,
+div>div:nth-of-type(8n)::before {
+	font-size: 4vmin;
+	content: counter(rows);
+	line-height: 10vmin;
+}
+body>div {
+	counter-reset: rows 0; 
+}
+div>div:nth-of-type(8n+1) {
+	counter-increment: rows;
+}
+div>div:nth-of-type(8n+1)::before {
+	margin-left: -6vmin;
+}
+div>div:nth-of-type(8n)::before {
+	margin-left: 14vmin;
+}
+div>div:nth-child(8)~div:nth-child(-n+16) {
+	top: calc(80vmin / 8);
+}
+div>div:nth-child(16)~div:nth-child(-n+24) {
+	top: calc(80vmin / 8 * 2);
+}
+div>div:nth-child(24)~div:nth-child(-n+32) {
+	top: calc(80vmin / 8 * 3);
+}
+div>div:nth-child(32)~div:nth-child(-n+40) {
+	top: calc(80vmin / 8 * 4);
+}
+div>div:nth-child(40)~div:nth-child(-n+48) {
+	top: calc(80vmin / 8 * 5);
+}
+div>div:nth-child(48)~div:nth-child(-n+56) {
+	top: calc(80vmin / 8 * 6);
+}
+div>div:nth-child(56)~div:nth-child(-n+64) {
+	top: calc(80vmin / 8 * 7);
+}
+div>div:nth-child(8n + 2) {
+	left: calc(80vmin / 8);
+}
+div>div:nth-child(8n + 3) {
+	left: calc(80vmin / 8 * 2);
+}
+div>div:nth-child(8n + 4) {
+	left: calc(80vmin / 8 * 3);
+}
+div>div:nth-child(8n + 5) {
+	left: calc(80vmin / 8 * 4);
+}
+div>div:nth-child(8n + 6) {
+	left: calc(80vmin / 8 * 5);
+}
+div>div:nth-child(8n + 7) {
+	left: calc(80vmin / 8 * 6);
+}
+div>div:nth-child(8n + 8) {
+	left: calc(80vmin / 8 * 7);
+}
+div>div:nth-child(-n+16),
+div>div:nth-last-child(-n+16) {
+    background-image: url("image.png");
+    background-size: 60vmin;
+    background-repeat: no-repeat;
+}
+div>div:nth-child(8)~div:nth-child(-n+16) {
+    background-position: -52vmin 0;
+}
+div>div:nth-child(48)~div:nth-child(-n+56) {
+    background-position: -52vmin -10vmin;
+}
+div>div:nth-last-child(-n+8) {
+    background-position-y: -10vmin; 
+}
+div>div:first-child, div>div:nth-child(8),
+div>div:last-child, div>div:nth-child(57) {
+    background-position-x: -20vmin;
+}
+div>div:nth-child(2), div>div:nth-child(6),
+div>div:nth-child(58), div>div:nth-child(63) {
+    background-position-x: -42vmin;
+}
+div>div:nth-child(3), div>div:nth-child(7),
+div>div:nth-child(59), div>div:nth-child(62) {
+    background-position-x: -31vmin;
+}
+div>div:nth-child(4), div>div:nth-child(60) {
+    background-position-x: -9.5vmin;
+}
+div>div:nth-child(5), div>div:nth-child(61) {
+    background-position-x: 0.8vmin;
+}
+</style>
+<body>
+	<div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>

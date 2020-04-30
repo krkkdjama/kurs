@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>smile</title>
+</head>
+<style>
+body {margin: 0;}
+.smile {
+	position: absolute;
+	border: 16px solid black;
+	border-radius: 50%;
+}
+.smile.face {
+	width: 400px;
+	height: 400px;
+	margin-left: 50px;
+}
+.smile.lip {
+	width: 280px;
+	height: 280px;
+	top: 50px;
+	left: 44px;
+}
+.eye.left {
+	width: 40px;
+	height: 40px;
+	top: 100px;
+	left: 100px;
+	z-index: 2;
+}
+.eye.right {
+	width: 40px;
+	height: 40px;
+	top: 100px;
+	left: 220px;
+	z-index: 2;
+}
+.clear.lip {
+	width: 281px;
+	height: 180px;
+	position: absolute;
+	top: 25px;
+	left: 44px;
+	z-index: 1;
+	border: 16px solid white;
+	background-color: white;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+.clear.eye {
+	width: 210px;
+	height: 50px;
+	position: absolute;
+	top: 135px;
+	left: 90px;
+	z-index: 3;
+	background-color: white;
+}
+.dot {
+	border: 8px solid black;
+	width: 0;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 4;
+}
+.one {
+	top: 128px;
+	left: 156px;
+}
+.two {
+	top: 128px;
+	left: 100px;
+}
+.three {
+	top: 128px;
+	left: 220px;
+}
+.four {
+	top: 128px;
+	left: 276px;
+}
+.five {
+	top: 229px;
+	left: 47px;
+}
+.six {
+	top: 229px;
+	left: 337px;
+}
+</style>
+<body>
+	<div class="smile face">
+		<div class="smile lip"></div>
+		<div class="smile eye left"></div>
+		<div class="smile eye right"></div>
+		<div class="clear lip"></div>
+		<div class="clear eye"></div>
+		<div class="dot one"></div>
+		<div class="dot two"></div>
+		<div class="dot three"></div>
+		<div class="dot four"></div>
+		<div class="dot five"></div>
+		<div class="dot six"></div>
+	</div>
+</body>
+</html>
