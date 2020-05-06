@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.square {
+		width: 100px;
+		height: 100px;
+	}
+	label {
+		display: none;
+	}
+	input{
+		display: none;
+	}
+	.red {
+		background-color: red;
+	}
+		.orange {
+		background-color: orange;
+	}
+		.yellow {
+		background-color: yellow;
+	}
+		.green {
+		background-color: green;
+	}
+		.lightblue {
+		background-color: lightblue;
+	}
+		.blue {
+		background-color: blue;
+	}
+		.violet {
+		background-color: violet;
+	}
+[type=radio]:nth-of-type(1):checked ~ .red,
+[type=radio]:nth-of-type(2):checked ~ .orange,
+[type=radio]:nth-of-type(3):checked ~ .yellow,
+[type=radio]:nth-of-type(4):checked ~ .green,
+[type=radio]:nth-of-type(5):checked ~ .lightblue,
+[type=radio]:nth-of-type(6):checked ~ .blue,
+[type=radio]:nth-of-type(7):checked ~ .violet {
+	display: block;
+}
+</style>
+<body>
+<input id="toRed" type="radio" name="color" checked>
+<input id="toOrange" type="radio" name="color">
+<input id="toYellow" type="radio" name="color">
+<input id="toGreen" type="radio" name="color">
+<input id="toLightblue" type="radio" name="color">
+<input id="toBlue" type="radio" name="color">
+<input id="toViolet" type="radio" name="color">
+<label for="toOrange" class="square red"></label>
+<label for="toYellow" class="square orange"></label>
+<label for="toGreen" class="square yellow"></label>
+<label for="toLightblue" class="square green"></label>
+<label for="toBlue" class="square lightblue"></label>
+<label for="toViolet" class="square blue"></label>
+<label for="toRed" class="square violet"></label>
+</body>
+</html>

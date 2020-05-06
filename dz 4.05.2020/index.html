@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calculator</title>
+</head>
+<style>
+body {
+	background: black;
+}
+.wrapper {
+	width: 580px;
+	height: 530px;
+	position: relative;
+	font-family: Arial;
+	font-size: 18px;
+}	
+.calculator {
+	background: url(sprite.png) no-repeat;
+	width: 580px;
+	height: 530px;
+	position: absolute;
+}
+.tablet {
+	background: url(sprite.png) 0 -530px no-repeat;
+	width: 580px;
+	height: 530px;
+	position: absolute;
+	opacity: 0.5;
+}
+.car {
+	background: url(sprite.png) 0 -1060px no-repeat;
+	width: 580px;
+	height: 530px;
+	position: absolute;
+	opacity: 0.5;
+}
+.home {
+	
+	background: url(sprite.png) 0 -1590px no-repeat;
+	width: 580px;
+	height: 530px;
+	position: absolute;
+	opacity: 0.5;
+}
+.fly {
+	background: url(sprite.png) 0 -2120px no-repeat;
+	width: 580px;
+	height: 530px;
+	position: absolute;
+	opacity: 0.5;
+}
+[type=text] {
+	position: absolute;
+	height: 20px; 
+	width: 72px;
+	left: 200px; 
+	top: 52px; 
+	border: none;
+	background-color: #f3f3f3;
+	outline: none;  
+	text-align: right;
+	font-size: 18px;
+	z-index: 1;
+}
+.sum-rub, .sum-usd {
+	position: absolute;
+	top: 18px;
+	left: 340px;
+	width: 140px;
+	height: 24px;
+	z-index: 1;
+	color: #e3f7ae;
+	text-align: center;
+	line-height: 24px;
+	display: none;
+}
+.small-font {
+	font-size: 12px;
+}
+.main-rub, .main-usd {
+	position: absolute;
+	top: 52px;
+	left: 292px;
+	width: 35px;
+	height: 24px;
+	color: #e3f7ae;
+	z-index: 1;
+	display: none;
+}
+.change-currenсy{
+	position: absolute;
+	width: 20px;
+	height: 7px;
+	cursor: pointer;
+	left: 8px;
+}
+.change-prev {
+	top: -5px;
+}
+.change-next {
+	bottom: -6px;
+}
+.rate {
+	position: absolute;
+	top: 51px;
+	left: 390px;
+	width: 35px;
+	height: 24px;
+	color: #e3f7ae;
+	z-index: 1;
+	line-height: 24px;
+}
+.rub, .usd {
+	position: absolute;
+	top: 103px;
+	left: 264px;
+	color: #e3f7ae;
+	z-index: 1;
+	display: none;
+}
+[name=currency] {
+	display: none;
+}
+#one:checked ~ div.sum-rub,
+#one:checked ~ div.main-rub,
+#one:checked ~ div.rub {
+	display: block;
+}
+#two:checked ~ div.sum-usd,
+#two:checked ~ div.main-usd,
+#two:checked ~ div.usd {
+	display: block;
+}
+.price {
+	position: absolute;
+	width: 115px;
+	height: 20px;
+	top: 102px;
+	right: 330px;
+	color: #e3f7ae;
+	text-align: right;
+	z-index: 1;
+}
+.price-to-month {
+	position: absolute;
+	width: 115px;
+	height: 20px;
+	top: 148px;
+	right: 330px;
+	color: #e3f7ae;
+	text-align: right;
+	z-index: 1;
+}
+.in-month {
+	position: absolute;
+	width: 115px;
+	height: 20px;
+	top: 145px;
+	left: 266px;
+	color: #e3f7ae;
+	z-index: 1;
+}
+.change-month {
+	position: absolute;
+	top: 101px;
+	left: 360px;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	z-index: 1;
+	color: #e3f7ae;
+	display: none;
+}
+[name=month] {
+	display: none;
+}
+.up-month {
+	position: absolute;
+	width: 20px;
+	height: 6px;
+	top: -6px;
+	left: 2px;
+	cursor: pointer;
+}
+.down-month {
+	position: absolute;
+	width: 20px;
+	height: 6px;
+	bottom: -6px;
+	left: 2px;
+	cursor: pointer;
+}
+#one-month:checked ~ div.change-month-one,
+#two-month:checked ~ div.change-month-two,
+#three-month:checked ~ div.change-month-three,
+#four-month:checked ~ div.change-month-four,
+#five-month:checked ~ div.change-month-five,
+#six-month:checked ~ div.change-month-six,
+#seven-month:checked ~ div.change-month-seven,
+#eight-month:checked ~ div.change-month-eight,
+#nine-month:checked ~ div.change-month-nine,
+#ten-month:checked ~ div.change-month-ten,
+#eleven-month:checked ~ div.change-month-eleven,
+#twelve-month:checked ~ div.change-month-twelve {
+	display: block;
+}
+[type=radio]:nth-child(-n+12):not(:nth-child(-n+2)):checked ~ div.tablet {
+	opacity: 1;
+}
+[type=radio]:nth-child(-n+12):not(:nth-child(-n+5)):checked ~ div.car {
+	opacity: 1;
+}
+[type=radio]:nth-child(-n+12):not(:nth-child(-n+8)):checked ~ div.home {
+	opacity: 1;
+}
+[type=radio]:nth-child(12):checked ~ div.fly {
+	opacity: 1;
+}
+</style>
+<body>
+	<div class="wrapper">
+		<input type="radio" id="one-month" name="month" checked>
+		<input type="radio" id="two-month" name="month">
+		<input type="radio" id="three-month" name="month">
+		<input type="radio" id="four-month" name="month">
+		<input type="radio" id="five-month" name="month">
+		<input type="radio" id="six-month" name="month">
+		<input type="radio" id="seven-month" name="month">
+		<input type="radio" id="eight-month" name="month">
+		<input type="radio" id="nine-month" name="month">
+		<input type="radio" id="ten-month" name="month">
+		<input type="radio" id="eleven-month" name="month">
+		<input type="radio" id="twelve-month" name="month">
+		<input type="radio" id="one" name="currency" checked>
+		<input type="radio" id="two" name="currency">
+		<input type="text" maxlength="7" name="sum" value="99999">
+		<div class="sum-rub">0 <span class="small-font">руб.</span> 00.<span class="small-font">00 коп.</span></div>
+		<div class="sum-usd">$0.00</div>
+		<div class="main-rub">RUB
+			<label for="two" class="change-currenсy change-prev"></label>
+			<label for="two" class="change-currenсy change-next"></label>
+		</div>
+		<div class="main-usd">USD
+			<label for="one" class="change-currenсy change-prev"></label>
+			<label for="one" class="change-currenсy change-next"></label>
+		</div>
+		<div class="rate">10%</div>
+		<div class="rub">RUB</div>
+		<div class="usd">USD</div>
+		<div class="price">6,300.00</div>
+		<div class="price-to-month">300.00</div>
+		<div class="in-month"><span class="small-font">в месяц</span></div>
+		<div class="change-month change-month-one">1
+			<label for="two-month" class="up-month"></label>
+			<label for="one-month" class="down-month"></label>
+		</div>
+		<div class="change-month change-month-two">2
+			<label for="three-month" class="up-month"></label>
+			<label for="one-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-three">3
+			<label for="four-month" class="up-month"></label>
+			<label for="two-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-four">4
+			<label for="five-month" class="up-month"></label>
+			<label for="three-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-five">5
+			<label for="six-month" class="up-month"></label>
+			<label for="four-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-six">6
+			<label for="seven-month" class="up-month"></label>
+			<label for="five-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-seven">7
+			<label for="eight-month" class="up-month"></label>
+			<label for="six-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-eight">8
+			<label for="nine-month" class="up-month"></label>
+			<label for="seven-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-nine">9
+			<label for="ten-month" class="up-month"></label>
+			<label for="eight-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-ten">10
+			<label for="eleven-month" class="up-month"></label>
+			<label for="nine-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-eleven">11
+			<label for="twelve-month" class="up-month"></label>
+			<label for="ten-month" class="down-month"></label>
+		</div>	
+		<div class="change-month change-month-twelve">12
+			<label for="twelve-month" class="up-month"></label>
+			<label for="eleven-month" class="down-month"></label>
+		</div>			
+		<div class="calculator"></div>
+		<div class="fly"></div>
+		<div class="home"></div>
+		<div class="car"></div>
+		<div class="tablet"></div>
+	</div>
+</body>
+</html>
