@@ -122,14 +122,14 @@ body {
 [name=currency] {
 	display: none;
 }
-#one:checked ~ div.sum-rub,
-#one:checked ~ div.main-rub,
-#one:checked ~ div.rub {
+#one:checked ~ .sum-rub,
+#one:checked ~ .main-rub,
+#one:checked ~ .rub {
 	display: block;
 }
-#two:checked ~ div.sum-usd,
-#two:checked ~ div.main-usd,
-#two:checked ~ div.usd {
+#two:checked ~ .sum-usd,
+#two:checked ~ .main-usd,
+#two:checked ~ .usd {
 	display: block;
 }
 .price {
@@ -192,30 +192,30 @@ body {
 	left: 2px;
 	cursor: pointer;
 }
-#one-month:checked ~ div.change-month-one,
-#two-month:checked ~ div.change-month-two,
-#three-month:checked ~ div.change-month-three,
-#four-month:checked ~ div.change-month-four,
-#five-month:checked ~ div.change-month-five,
-#six-month:checked ~ div.change-month-six,
-#seven-month:checked ~ div.change-month-seven,
-#eight-month:checked ~ div.change-month-eight,
-#nine-month:checked ~ div.change-month-nine,
-#ten-month:checked ~ div.change-month-ten,
-#eleven-month:checked ~ div.change-month-eleven,
-#twelve-month:checked ~ div.change-month-twelve {
+#one-month:checked ~ .change-month-one,
+#two-month:checked ~ .change-month-two,
+#three-month:checked ~ .change-month-three,
+#four-month:checked ~ .change-month-four,
+#five-month:checked ~ .change-month-five,
+#six-month:checked ~ .change-month-six,
+#seven-month:checked ~ .change-month-seven,
+#eight-month:checked ~ .change-month-eight,
+#nine-month:checked ~ .change-month-nine,
+#ten-month:checked ~ .change-month-ten,
+#eleven-month:checked ~ .change-month-eleven,
+#twelve-month:checked ~ .change-month-twelve {
 	display: block;
 }
-[type=radio]:nth-child(-n+12):not(:nth-child(-n+2)):checked ~ div.tablet {
+[type=radio]:nth-child(-n+12):not(:nth-child(-n+2)):checked ~ .tablet {
 	opacity: 1;
 }
-[type=radio]:nth-child(-n+12):not(:nth-child(-n+5)):checked ~ div.car {
+[type=radio]:nth-child(-n+12):not(:nth-child(-n+5)):checked ~ .car {
 	opacity: 1;
 }
-[type=radio]:nth-child(-n+12):not(:nth-child(-n+8)):checked ~ div.home {
+[type=radio]:nth-child(-n+12):not(:nth-child(-n+8)):checked ~ .home {
 	opacity: 1;
 }
-[type=radio]:nth-child(12):checked ~ div.fly {
+[type=radio]:nth-child(12):checked ~ .fly {
 	opacity: 1;
 }
 </style>
