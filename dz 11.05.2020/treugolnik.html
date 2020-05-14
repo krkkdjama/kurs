@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+body{
+	margin: 300px;
+}
+div {
+	width: 200px;
+	height: 10px;
+	background: red; 
+	border-radius: 50px;
+	box-shadow: 0 0 0 50px red;
+}
+#one {
+	position: relative;
+}
+#two, #three {
+	position: absolute;
+	top: -82px;
+}
+#two {
+	left: -48px;
+	transform: rotate(-60deg);
+}
+#three {
+	right: -48px;
+	transform: rotate(60deg);
+}
+</style>
+<body>
+	<div id="one">
+		<div id="two"></div>
+		<div id="three"></div>
+	</div>
+</body>
+</html>

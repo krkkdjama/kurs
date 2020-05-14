@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myach</title>
+</head>
+<style>
+.center {
+	left: 50%;
+	animation: shadowCenter 4s infinite;
+}
+.ballShadow {
+	position: absolute;
+	bottom: 0;
+	width: 75px;
+	height: 75px;
+	background: rgba(20, 20, 20, .1);
+	box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+	border-radius: 50%;	
+	transform: scaleY(.2);
+}
+.ball {
+	width: 100px;
+	height: 100px;
+	background: green;
+	border-radius: 50%;
+	position: absolute;
+	animation: jumpBall 1s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate,
+	moveBall 4s linear infinite alternate both;
+	animation-play-state: running;
+	cursor: pointer;
+	opacity: 0.7; 
+}
+@keyframes jumpBall {
+	0%  { bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5); }
+	100% { bottom: 50%; box-shadow: 0 50px 50px rgba(0,0,0,0.1); }
+}
+@keyframes moveBall {
+	0%  { left: 0; }
+	100% { left: calc(100% - 100px); }
+}
+@keyframes shadowCenter {
+	0% {
+		bottom: 70px;
+		margin-left: -50px;
+		background: rgba(20, 20, 20, .1);
+		box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		animation-timing-function: ease-in;
+	}
+	50% {
+		bottom: 10px;
+		margin-left: -20px;
+		width: 20px;
+		height: 5px;
+		background: rgba(20, 20, 20, .3);
+		box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		bottom: 0;
+		margin-left: -50px;
+		opacity: 0;
+		background: rgba(20, 20, 20, .1);
+		box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		animation-timing-function: ease-in;
+	}
+}
+</style>
+<body>
+	<div class="ball"></div>
+	<div class="ballShadow center"></div>
+</body>
+</html>

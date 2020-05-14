@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+body{
+	margin: 200px;
+	position: relative;
+}
+div {
+	width: 100px;
+	height: 100px;
+	border-radius: 20px;
+	position: relative;
+}
+#one {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0; 
+	position: absolute;
+	top: 0;
+	background: red;
+	transform: rotate(-15deg) skew(15deg, 15deg);
+	left: 56px;
+}
+#two {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	position: absolute;
+	top: 0;
+	background: green;
+	transform: rotate(15deg) skew(-15deg, -15deg);
+	left: 4px;
+}
+#three {
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	position: absolute;
+	background: blue;
+	transform: rotate(45deg) skew(15deg, 15deg);
+	top: -45px;
+	left: 30px;
+}
+</style>
+<body>
+	<div id="one"></div>
+	<div id="two"></div>
+	<div id="three"></div>
+</body>
+</html>
