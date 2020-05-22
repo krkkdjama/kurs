@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dz flexbox</title>
+</head>
+<style>
+body {
+	margin: 0;
+	font-size: 1.5em;
+	color: white;
+}
+header {
+	display: flex;
+}
+header>div {
+	height: 100px;
+	margin: 10px;
+	background: gray;
+}
+header>div:first-child {
+	flex: 0 1 15%;
+}
+header>div:nth-child(2) {
+	flex: 2 1 35%;
+}
+header>div:last-child {
+	flex: 0 2 65%;
+}
+main {
+	display: flex;
+	margin: 10px;
+}
+aside {
+	display: flex;
+	flex-basis: 18%;
+	flex-direction: column;
+}
+aside>div {
+	background: gray;
+}
+aside>div:first-child {
+	flex-basis: 250px;
+}
+aside>div:last-child {
+	flex-basis: 100px;
+	margin-top: 250px;
+}
+article {
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+	justify-content: space-between;
+	margin-left: 20px;
+}
+article>div:first-child {
+	flex-basis: 100%;
+	background: #dcdcdc;
+}
+ul{
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+li {
+	flex-basis: 18%;
+	background: #dcdcdc;
+	margin-left: 2.5%;
+	margin-bottom: 20px;
+}
+li:nth-child(5n+1) {
+	margin-left: 0;
+}
+li:nth-last-child(-n+2) {
+	margin-bottom: 0;
+}
+article>div:nth-last-child(-n+2) {
+	flex-basis: 48%;
+	background: #dcdcdc;
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 260px;
+}
+footer>div {
+	background: gray;
+	margin: 10px;
+}
+footer>div:nth-child(-n+2) {
+	flex-basis: 230px;
+}
+footer>div:nth-child(3) {
+	flex-basis: 100px;
+	margin-bottom: 20px;
+}
+footer>div:last-child {
+	flex-basis: 100px;
+	margin-top: 10px;
+}
+@media screen and (max-width: 320px) {
+	.wrapper {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+}
+</style>
+<body>
+	<div class="wrapper">
+		<header>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</header>
+		<hr>
+		<main>
+			<aside>
+				<div>4</div>
+				<div>7</div>
+			</aside>
+			<article>
+				<div>5</div>
+				<ul>
+					<li>6</li>
+					<li>6</li>
+					<li>6</li>
+					<li>6</li>
+					<li>6</li>
+					<li>6</li>
+					<li>6</li>
+				</ul>
+				<div>8</div>
+				<div>9</div>
+			</article>
+		</main>
+		<hr>
+		<footer>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<div>13</div>
+		</footer>
+	</div>	
+</body>
+</html>

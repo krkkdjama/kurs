@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>!!</title>
+</head>
+<style>
+header {
+	height: 80px;
+	background: #ccc;
+}
+footer {
+	height: 180px;
+	background: #ccc;
+}
+main {
+	display: flex;
+}
+nav {
+	background: #aaa;
+	flex-basis: 150px;
+}
+article {
+	background: blue;
+	flex-grow: 1;
+}
+aside {
+	background: #aaa;
+	flex-basis: 100px;
+}
+li:hover {
+	background: white;
+	opacity: 0.5;
+}
+@media screen and (max-width: 500px) {
+	main {
+		flex-direction: column;
+	}
+	article {
+		order: 1;
+	}
+	nav {
+		order: 2;
+	}
+	aside {
+		order: 3;
+	}
+}
+@media screen and (min-width: 1000px) {
+	nav {
+		flex-basis: 100%;
+	}
+	main {
+		flex-wrap: wrap;
+	}
+	aside {
+		flex-basis: 20%;
+	}
+	article {
+		flex-basis: 80%;
+	}
+	nav>ul {
+		display: flex;
+		list-style-type: none;
+		justify-content: space-around;
+		padding-inline-start: 0;
+	}
+	nav>ul>li {
+		flex-grow: 1;
+		text-align: center;
+	}
+}
+</style>
+<body>
+	<header>Header</header>
+	<main>
+		<nav>
+			<ul>
+				<li><a href="#">пункт1</a></li>
+				<li><a href="#">пункт1</a></li>
+				<li><a href="#">пункт1</a></li>
+				<li><a href="#">пункт1</a></li>
+			</ul>
+		</nav>
+		<article>
+			<h2>Самая интересная статья</h2>
+			<p>Lorem ipsun Lorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsunLorem ipsun</p>
+		</article>
+		<aside><div>
+			Реклама реклама
+		</div>
+	</aside>
+</main>
+<footer>Footer</footer>
+</body>
+</html>
