@@ -1,0 +1,194 @@
+.chessBoard {
+  width: 80vmin;
+  height: 80vmin;
+  outline: 1px solid red;
+  font-size: 0;
+  margin-left: 10vmin;
+}
+
+.chessBoard__cell {
+  width: 10vmin;
+  height: 10vmin;
+  display: inline-block;
+}
+
+.chessBoard__cell:nth-of-type(16n+2), .chessBoard__cell:nth-of-type(16n+4), .chessBoard__cell:nth-of-type(16n+6), .chessBoard__cell:nth-of-type(16n+8), .chessBoard__cell:nth-of-type(16n+9), .chessBoard__cell:nth-of-type(16n+11), .chessBoard__cell:nth-of-type(16n+13), .chessBoard__cell:nth-of-type(16n+15) {
+  background-color: red;
+}
+
+.chessBoard__cell:nth-of-type(-n+16), .chessBoard__cell:nth-last-child(-n+16) {
+  background-image: url("image.png");
+  background-size: 60vmin;
+  background-repeat: no-repeat;
+}
+
+.chessBoard__cell:nth-child(2), .chessBoard__cell:nth-child(6), .chessBoard__cell:nth-child(58), .chessBoard__cell:nth-child(63) {
+  background-position-x: -42vmin;
+}
+
+.chessBoard__cell:nth-child(3), .chessBoard__cell:nth-child(7), .chessBoard__cell:nth-child(59), .chessBoard__cell:nth-child(62) {
+  background-position-x: -31vmin;
+}
+
+.chessBoard__cell:nth-child(4), .chessBoard__cell:nth-child(60) {
+  background-position-x: -9.5vmin;
+}
+
+.chessBoard__cell:nth-child(5), .chessBoard__cell:nth-child(61) {
+  background-position-x: 0.8vmin;
+}
+
+.chessBoard__cell:first-child, .chessBoard__cell:nth-child(8), .chessBoard__cell:last-child, .chessBoard__cell:nth-child(57) {
+  background-position-x: -20vmin;
+}
+
+.chessBoard__cell:nth-last-child(-n+8) {
+  background-position-y: -10vmin;
+}
+
+.chessBoard__cell:nth-child(8) ~ .chessBoard__cell:nth-child(-n+16) {
+  background-position: -52vmin 0;
+}
+
+.chessBoard__cell:nth-child(48) ~ .chessBoard__cell:nth-child(-n+56) {
+  background-position: -52vmin -10vmin;
+}
+
+.chessBoard__cell_number_left-1::before {
+  content: "1";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-1::before {
+  content: "1";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+.chessBoard__cell_number_left-2::before {
+  content: "2";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-2::before {
+  content: "2";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+.chessBoard__cell_number_left-3::before {
+  content: "3";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-3::before {
+  content: "3";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+.chessBoard__cell_number_left-4::before {
+  content: "4";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-4::before {
+  content: "4";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+.chessBoard__cell_number_left-5::before {
+  content: "5";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-5::before {
+  content: "5";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+.chessBoard__cell_number_left-6::before {
+  content: "6";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-6::before {
+  content: "6";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+.chessBoard__cell_number_left-7::before {
+  content: "7";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-7::before {
+  content: "7";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+.chessBoard__cell_number_left-8::before {
+  content: "8";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  left: 4vmin;
+}
+
+.chessBoard__cell_number_right-8::before {
+  content: "8";
+  position: absolute;
+  font-size: 4vmin;
+  line-height: 8vmin;
+  right: 69vmin;
+}
+
+body::before,
+body::after {
+  content: 'abcdefgh';
+  height: 10vmin;
+  line-height: 10vmin;
+  font-size: 4vmin;
+  margin-left: 14vmin;
+  letter-spacing: 8.2vmin;
+}
+/*# sourceMappingURL=main.css.map */

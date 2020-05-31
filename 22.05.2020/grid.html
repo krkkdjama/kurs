@@ -9,6 +9,7 @@ header, nav, main, aside, footer {
 	outline: 1px solid black;
 }
 body {
+	width: calc(100% - 16px);
 	display: grid;
 	grid-template-columns: 200px 1fr;
 	grid-template-rows: 100px 100px 1fr 300px; 
@@ -33,9 +34,10 @@ footer {
 	width: calc(100% - 20px);
 	height: 380px;
 	margin: 10px;
-	background: #ccc;
+	background-color: #ccc;
 }
 @media screen and (max-width: 400px) {
+
 	header {
 		grid-area: header;
 	}
@@ -58,12 +60,12 @@ footer {
 	body {
 		margin: 0;
 		grid-template-columns: 1fr;
-		grid-template-rows: 50px 1fr 380px 1fr 200px; 
+		grid-template-rows: 50px 1fr 380px 1fr 200px;
 		grid-template-areas: 
-		"header" 
-		"main" 
-		"aside" 
-		"nav" 
+		"header"
+		"main"
+		"aside"
+		"nav"
 		"footer";
 	}
 }
@@ -71,6 +73,8 @@ footer {
 	body {
 		grid-template-columns: 200px 600px;
 		justify-content: center;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 </style>
@@ -79,7 +83,8 @@ footer {
 	<nav>Навигационное меню</nav>
 	<main>Основной контент</main>
 	<aside>
-		<div class="ad">Реклама</div></aside>
-		<footer>Футер</footer>
-	</body>
-	</html>
+		<div class="ad">Реклама</div>
+	</aside>
+	<footer>Футер</footer>
+</body>
+</html>

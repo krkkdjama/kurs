@@ -1,0 +1,110 @@
+$BoardH       : 80vmin;
+$BoardW       : 80vmin;
+$BoardMargin  : 10vmin;
+$CellH        : 10vmin;
+$CellW        : 10vmin;
+$CellBgcolor  : red;
+$SpriteImg    : url("image.png");
+$SpriteImgSize: 60vmin;
+
+.chessBoard {
+    width      : $BoardW;
+    height     : $BoardH;
+    outline    : 1px solid red;
+    font-size  : 0;
+    margin-left: $BoardMargin;
+
+    &__cell {
+        width  : $CellH;
+        height : $CellW;
+        display: inline-block;
+
+        &:nth-of-type(16n+2),
+        &:nth-of-type(16n+4),
+        &:nth-of-type(16n+6),
+        &:nth-of-type(16n+8),
+        &:nth-of-type(16n+9),
+        &:nth-of-type(16n+11),
+        &:nth-of-type(16n+13),
+        &:nth-of-type(16n+15) {
+            background-color: $CellBgcolor;
+        }
+
+        &:nth-of-type(-n+16),
+        &:nth-last-child(-n+16) {
+            background-image : $SpriteImg;
+            background-size  : $SpriteImgSize;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(2),
+        &:nth-child(6),
+        &:nth-child(58),
+        &:nth-child(63) {
+            background-position-x: -42vmin;
+        }
+
+        &:nth-child(3),
+        &:nth-child(7),
+        &:nth-child(59),
+        &:nth-child(62) {
+            background-position-x: -31vmin;
+        }
+
+        &:nth-child(4),
+        &:nth-child(60) {
+            background-position-x: -9.5vmin;
+        }
+
+        &:nth-child(5),
+        &:nth-child(61) {
+            background-position-x: 0.8vmin;
+        }
+
+        &:first-child,
+        &:nth-child(8),
+        &:last-child,
+        &:nth-child(57) {
+            background-position-x: -20vmin;
+        }
+
+        &:nth-last-child(-n+8) {
+            background-position-y: -10vmin;
+        }
+
+        &:nth-child(8)~&:nth-child(-n+16) {
+            background-position: -52vmin 0;
+        }
+
+        &:nth-child(48)~&:nth-child(-n+56) {
+            background-position: -52vmin -10vmin;
+        }
+
+        @for $i from 1 through 8 {
+
+            &_number_left-#{$i}::before {
+                content    : "#{$i}";
+                position   : absolute;
+                font-size  : 4vmin;
+                line-height: 8vmin;
+                left       : 4vmin;
+            }
+            &_number_right-#{$i}::before {
+                content    : "#{$i}";
+                position   : absolute;
+                font-size  : 4vmin;
+                line-height: 8vmin;
+                right       : 69vmin; 
+            }
+        }
+    }
+}
+body::before,
+body::after {
+    content       : 'abcdefgh';
+    height        : $CellH;
+    line-height   : $CellH;
+    font-size     : 4vmin;
+    margin-left   : 14vmin;
+    letter-spacing: 8.2vmin;
+}
