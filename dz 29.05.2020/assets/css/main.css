@@ -1,4 +1,5 @@
 .chessBoard {
+  position: relative;
   width: 80vmin;
   height: 80vmin;
   outline: 1px solid red;
@@ -59,7 +60,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-1::before {
@@ -67,7 +68,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 .chessBoard__cell_number_left-2::before {
@@ -75,7 +76,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-2::before {
@@ -83,7 +84,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 .chessBoard__cell_number_left-3::before {
@@ -91,7 +92,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-3::before {
@@ -99,7 +100,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 .chessBoard__cell_number_left-4::before {
@@ -107,7 +108,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-4::before {
@@ -115,7 +116,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 .chessBoard__cell_number_left-5::before {
@@ -123,7 +124,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-5::before {
@@ -131,7 +132,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 .chessBoard__cell_number_left-6::before {
@@ -139,7 +140,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-6::before {
@@ -147,7 +148,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 .chessBoard__cell_number_left-7::before {
@@ -155,7 +156,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-7::before {
@@ -163,7 +164,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 .chessBoard__cell_number_left-8::before {
@@ -171,7 +172,7 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  left: 4vmin;
+  left: -6vmin;
 }
 
 .chessBoard__cell_number_right-8::before {
@@ -179,14 +180,14 @@
   position: absolute;
   font-size: 4vmin;
   line-height: 8vmin;
-  right: 69vmin;
+  right: -6vmin;
 }
 
 body::before,
 body::after {
   content: 'abcdefgh';
   height: 10vmin;
-  line-height: 10vmin;
+  line-height: 8vmin;
   font-size: 4vmin;
   margin-left: 14vmin;
   letter-spacing: 8.2vmin;

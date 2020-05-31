@@ -6,14 +6,17 @@ $CellW        : 10vmin;
 $CellBgcolor  : red;
 $SpriteImg    : url("image.png");
 $SpriteImgSize: 60vmin;
+$FontSize: 4vmin;
+$Cellnumber: 6vmin;
+$LineH: 8vmin;
 
 .chessBoard {
+    position: relative;
     width      : $BoardW;
     height     : $BoardH;
     outline    : 1px solid red;
     font-size  : 0;
     margin-left: $BoardMargin;
-
     &__cell {
         width  : $CellH;
         height : $CellW;
@@ -85,16 +88,16 @@ $SpriteImgSize: 60vmin;
             &_number_left-#{$i}::before {
                 content    : "#{$i}";
                 position   : absolute;
-                font-size  : 4vmin;
-                line-height: 8vmin;
-                left       : 4vmin;
+                font-size  : $FontSize;
+                line-height: $LineH;
+                left       : -$Cellnumber;
             }
             &_number_right-#{$i}::before {
                 content    : "#{$i}";
                 position   : absolute;
-                font-size  : 4vmin;
-                line-height: 8vmin;
-                right       : 69vmin; 
+                font-size  : $FontSize;
+                line-height: $LineH;
+                right       : -$Cellnumber; 
             }
         }
     }
@@ -103,8 +106,8 @@ body::before,
 body::after {
     content       : 'abcdefgh';
     height        : $CellH;
-    line-height   : $CellH;
-    font-size     : 4vmin;
-    margin-left   : 14vmin;
-    letter-spacing: 8.2vmin;
+    line-height   : $LineH;
+    font-size     : $FontSize;
+    margin-left   : $BoardMargin + 4;
+    letter-spacing: $LineH + 0.2;
 }
