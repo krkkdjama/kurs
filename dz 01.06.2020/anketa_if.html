@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var surname=prompt ('Введите вашу фамилию');
+        var name=prompt ('Введите ваше имя');
+        var lastname=prompt ('Введите ваше отчество');
+        var age=parseInt(prompt ('Укажите ваш возраст в годах', 'введите полное число лет'));
+        var gender=confirm ('Ваш пол мужской?');
+        if (age>=65) {
+            var pensioner='да';
+        }
+        else
+            var pensioner='нет';
+        if (gender==true) {
+            var pol='мужской';
+        }
+        else
+            var pol='женский';
+        alert ('Ваше ФИО: '+surname+' '+name+' '+lastname+
+        '\nВаш возраст в годах: '+age+
+        '\nВаш возраст в днях: '+(age*365)+
+        '\nЧерез 5 лет вам будет: '+(age+5)+
+        '\nВаш пол: '+pol+
+        '\nВы на пенсии: '+pensioner);
+    </script>
+</body>
+</html>
