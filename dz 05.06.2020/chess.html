@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматная доска</title>
+</head>
+<body>
+    <script>
+        var chessTable = [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        ];
+        var letters = "abcdefgh";
+        for (var i = 0; i <= 7; i++) {
+            for (var j = 0; j <= 7; j++) {
+                chessTable[i][j] = {};
+                chessTable[i][j].number = i + 1;
+                chessTable[i][j].letter = letters[j];
+                chessTable[i][j].figure = {};
+                if (i % 2 === 0) {
+                    if (j % 2 === 0) {
+                        chessTable[i][j].color = "#FFFFFF";
+                    } else {
+                        chessTable[i][j].color = "#000000";
+                    }
+                } else {
+                    if (j % 2 === 0) {
+                        chessTable[i][j].color = "#000000";
+                    } else {
+                        chessTable[i][j].color = "#FFFFFF";
+                    }
+                }
+                if (i === 1 || i === 6) {
+                    chessTable[i][j].figure.rank = "пешка";
+                }
+                if (i === 0 || i === 1) {
+                    chessTable[i][j].figure.color = "#FFFFFF";
+                }
+                if (i === 6 || i === 7) {
+                    chessTable[i][j].figure.color = "#000000";
+                }
+            }
+        }
+        chessTable[0][0].figure.rank = chessTable[0][7].figure.rank = chessTable[7][0].figure.rank = chessTable[7][7].figure.rank = "ладья";
+        chessTable[0][1].figure.rank = chessTable[0][6].figure.rank = chessTable[7][1].figure.rank = chessTable[7][6].figure.rank = "конь";
+        chessTable[0][2].figure.rank = chessTable[0][5].figure.rank = chessTable[7][2].figure.rank = chessTable[7][5].figure.rank = "офицер";
+        chessTable[0][3].figure.rank = chessTable[7][3].figure.rank = "ферзь";
+        chessTable[0][4].figure.rank = chessTable[7][4].figure.rank = "король";
+        function getLetter () {
+            while(true) {
+                var letter=prompt("Введите буквенную координату фигуры");
+                if (
+                letter === "a" ||
+                letter === "b" ||
+                letter === "c" ||
+                letter === "d" ||
+                letter === "e" ||
+                letter === "f" ||
+                letter === "g" ||
+                letter === "h"
+                ) {
+                    return letter;
+            } else {
+                alert ("Введите букву от a до h");
+            }
+        }
+    }
+    function getNum() {
+        while(true) {
+            var num = parseInt(prompt("Введите цифру от 1 до 8"), 10);
+            if (isNaN(num) || num < 1 || num > 8) {
+                alert("Введите цифру от 1 до 8");
+            } else {
+                return num;
+            }
+        }
+    }
+        do {
+                var letterFrom = getLetter();
+                var numFrom = getNum();
+                    // while(true) {
+                    //     var numFrom = parseInt(prompt("Введите цифру от 1 до 8"), 10);
+                    //     if (isNaN(numFrom) || numFrom < 1 || numFrom > 8) {
+                    //         alert("Введите цифру от 1 до 8");
+                    //     } else {
+                    //         var iFrom;
+                    //         var jFrom
+                    //         for (var i=0; i < chessTable.length; i++) {
+                    //             for (var j=0; j < chessTable[i].length; j++) {
+                    //                 if (letterFrom === chessTable[i][j].letter && numFrom === chessTable[i][j].number) {
+                    //                     iFrom = i;
+                    //                     jFrom = j;
+                    //                 }
+                    //             }
+                    //         }
+                    //         if (chessTable[iFrom][jFrom].figure.rank === undefined) {
+                    //             alert ("Здесь нет никакой фигуры");
+                    //             continue;
+                    //         }
+                    //         break;
+                    //     }
+                    // }
+        } while (confirm("Желаете продолжить?"));
+    </script>
+</body>
+</html>

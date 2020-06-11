@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>country</title>
+</head>
+<body>
+    <script>
+        var countryArray = [];
+        var maxPopulation = 100500;
+        var minTerritory = 100500;
+
+        function countyInfo(count) {
+            while (confirm("Добавьте страну и запрашиваемые данные о ней")) {
+                var country = prompt("Введите название страны");
+                var territory = parseInt(prompt("Введите площадь территории страны"));
+                var population = parseInt(prompt("Введите численность населения"));
+                count[count.length] = {
+                    country,
+                    territory,
+                    population
+                }
+            }
+            console.log(count);
+            // console.log(`Страны с территорией больше ${minTerritory}`)
+            // for (var i = 0; i < count.length; i++) {
+            //     if (count[i].territory > minTerritory) {
+            //         console.log(`${count[i].country}`)
+            //     }
+            // }
+            // console.log(`Страны с численностью населения больше ${maxPopulation}`)
+            // for (var i = 0; i < count.length; i++) {
+            //     if (count[i].population > maxPopulation) {
+            //         console.log(`${count[i].country}`)
+            //     }
+            // }
+            for (var i = 0; i < count.length; i++) {
+                if (count[i].territory > minTerritory) {
+                    console.log(`Страна ${count[i].country} имеет территорию больше чем ${minTerritory}`)
+                }
+                if (count[i].population > maxPopulation) {
+                    console.log(`Страна ${count[i].country} имеет население больше чем ${maxPopulation}`)
+                }
+            }
+            return count;
+        }
+        countyInfo(countryArray);
+    </script>
+</body>
+</html>
