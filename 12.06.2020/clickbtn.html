@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обработка нажатий по кнопкам</title>
+</head>
+<body>
+    <input type="button" value="Жми меня" onclick="alert('Привет!')">
+    <input type="button" value="Жми меня-2" onclick="clickHandler(`Нажата кнопка 2`)">
+    <script>
+function clickHandler (e) {
+    console.log(e)
+}
+    </script>
+</body>
+</html>
