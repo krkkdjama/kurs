@@ -8,9 +8,13 @@ $.post("http://109.235.69.203:8080/data/1001/", {
 name, date, car, exam
 });
 $("form").trigger('reset');
+});
 $(`button[name=result]`).on("click", function(e) {
-    $("table").append(`<tr> <td>${name}</td> <td>${date}</td> <td>${car}</td> <td>${exam}</td> </tr>`)
-});
+    $.get( "http://109.235.69.203:8080/data/1001/", function(e) {
+        for (var i = 0; i< e.length; i++) {
+            $("table").append(`<tr> <td>${e[i].name}</td> <td>${e[i].date}</td> <td>${e[i].car}</td> <td>${e[i].exam}</td> </tr>`)
+        }
+        });
 });
 
-
+    
