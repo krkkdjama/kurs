@@ -162,15 +162,17 @@
 						currentElement = e.target;
 						currentElement.classList.add("active")
 					}
-					console.log(currentElement.innerHTML);
 				} else {
-					while (e.target.innerHTML == "") {
+					if (e.target.innerHTML == "") {
 					var tmpInnerHTML = currentElement.innerHTML;
                     currentElement.innerHTML = e.target.innerHTML;
                     e.target.innerHTML = tmpInnerHTML;
                     currentElement.classList.remove("active");
                     currentElement = null;
-					}  
+					}
+					else {
+						alert("Здесь есть фигура");
+					}
                 }
             });
         }
